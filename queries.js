@@ -1,4 +1,5 @@
 const Pool = require('pg').Pool;
+
 const pool = new Pool({
 	user: 'me',
 	host: 'localhost',
@@ -65,3 +66,10 @@ const deleteUser = (request, response) => {
 	});
 };
 
+module.exports = {
+	getUsers,
+	getUserById,
+	createUser,
+	updateUser,
+	deleteUser,
+};
